@@ -1,0 +1,62 @@
+/* Nama file: style.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark {
+    background-color: #1f2937;
+    color: #f3f4f6;
+}
+
+.fade-in {
+    animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+.project-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.filter-btn {
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.filter-btn.active {
+    background-color: #4f46e5;
+    color: white;
+}
+
+#mobile-menu {
+    transition: max-height 0.3s ease;
+}
+
+#mobile-menu.active {
+    display: block;
+    max-height: 300px;
+}
+
+@media (max-width: 768px) {
+    nav {
+        display: none;
+    }
+    .project-card {
+        margin-bottom: 2rem;
+    }
+}
