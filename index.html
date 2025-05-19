@@ -1,0 +1,136 @@
+<!-- Nama file: index.html -->
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>portfolio sederhana - Premium Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="font-poppins bg-gray-50 transition-colors duration-300" id="theme-body">
+    <!-- Theme Toggle -->
+    <button id="theme-toggle" class="fixed top-4 right-4 bg-indigo-600 text-white p-2 rounded-full shadow-lg hover:bg-indigo-700 transition">
+        <i class="fas fa-moon"></i>
+    </button>
+
+    <!-- Header -->
+    <header class="bg-gradient-to-r from-indigo-600 to-blue-600 text-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <h1 class="text-3xl font-bold">portfolio sederhana</h1>
+            <nav class="hidden md:flex space-x-6">
+                <a href="#home" class="hover:text-gray-200 transition">Home</a>
+                <a href="#about" class="hover:text-gray-200 transition">About</a>
+                <a href="#projects" class="hover:text-gray-200 transition">Projects</a>
+                <a href="#contact" class="hover:text-gray-200 transition">Contact</a>
+            </nav>
+            <button id="menu-toggle" class="md:hidden text-2xl">☰</button>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-indigo-700 text-white">
+            <a href="#home" class="block px-6 py-3 hover:bg-indigo-800">Home</a>
+            <a href="#about" class="block px-6 py-3 hover:bg-indigo-800">About</a>
+            <a href="#projects" class="block px-6 py-3 hover:bg-indigo-800">Projects</a>
+            <a href="#contact" class="block px-6 py-3 hover:bg-indigo-800">Contact</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center bg-gradient-to-b from-gray-900 to-indigo-900 text-white">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-5xl md:text-6xl font-bold mb-6 fade-in">Welcome to portfolio sederhana</h2>
+            <p class="text-xl md:text-2xl mb-8">Crafting digital experiences with creativity and innovation.</p>
+            <a href="#projects" class="bg-blue-600 text-white px-8 py-3 rounded-full hover:bg-blue-700 transition text-lg">Explore My Work</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white dark:bg-gray-800 dark:text-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-12 text-gray-800 dark:text-white">About Me</h2>
+            <div class="flex flex-col md:flex-row items-center gap-8">
+                <img src="https://via.placeholder.com/300" alt="Profile" class="w-64 h-64 rounded-full shadow-lg">
+                <div>
+                    <p class="text-lg text-gray-700 dark:text-gray-300 mb-4">I'm a passionate web developer with a focus on creating modern, user-friendly websites.</p>
+                    <p class="text-lg text-gray-700 dark:text-gray-300">My mission is to bring ideas to life with elegant code and stunning visuals.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-gray-100 dark:bg-gray-900 dark:text-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-12 text-gray-800 dark:text-white">My Projects</h2>
+            <div class="flex justify-center mb-8">
+                <button class="filter-btn active px-4 py-2 mx-2 bg-indigo-600 text-white rounded-full" data-filter="all">All</button>
+                <button class="filter-btn px-4 py-2 mx-2 bg-gray-300 text-gray-800 rounded-full" data-filter="web">Web</button>
+                <button class="filter-btn px-4 py-2 mx-2 bg-gray-300 text-gray-800 rounded-full" data-filter="app">App</button>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 project-grid">
+                <div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden project-card" data-category="web">
+                    <img src="https://via.placeholder.com/400" alt="Project 1" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Web Project</h3>
+                        <p class="text-gray-600 dark:text-gray-300">A modern web application with dynamic features.</p>
+                    </div>
+                </div>
+                <div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden project-card" data-category="app">
+                    <img src="https://via.placeholder.com/400" alt="Project 2" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Mobile App</h3>
+                        <p class="text-gray-600 dark:text-gray-300">A cross-platform app with seamless UX.</p>
+                    </div>
+                </div>
+                <div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden project-card" data-category="web">
+                    <img src="https://via.placeholder.com/400" alt="Project 3" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Portfolio Site</h3>
+                        <p class="text-gray-600 dark:text-gray-300">A stunning portfolio with creative designs.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gray-900 text-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-12">Get in Touch</h2>
+            <form id="contact-form" class="max-w-lg mx-auto">
+                <div class="mb-6">
+                    <label for="name" class="block text-lg mb-2">Name</label>
+                    <input type="text" id="name" class="w-full p-3 rounded-lg bg-gray-800 border border-gray-700 focus:outline-none focus:border-blue-600" required>
+                    <p class="text-red-500 text-sm mt-1 hidden" id="name-error">Name is required</p>
+                </div>
+                <div class="mb-6">
+                    <label for="email" class="block text-lg mb-2">Email</label>
+                    <input type="email" id="email" class="w-full p-3 rounded-lg bg-gray-800 border border-gray-700 focus:outline-none focus:border-blue-600" required>
+                    <p class="text-red-500 text-sm mt-1 hidden" id="email-error">Invalid email format</p>
+                </div>
+                <div class="mb-6">
+                    <label for="message" class="block text-lg mb-2">Message</label>
+                    <textarea id="message" class="w-full p-3 rounded-lg bg-gray-800 border border-gray-700 focus:outline-none focus:border-blue-600" rows="5" required></textarea>
+                    <p class="text-red-500 text-sm mt-1 hidden" id="message-error">Message is required</p>
+                </div>
+                <button type="submit" class="bg-blue-600 text-white px-8 py-3 rounded-full hover:bg-blue-700 transition w-full">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-6 text-center">
+            <p>© 2025 portfolio sederhana. All rights reserved.</p>
+            <div class="mt-4 flex justify-center space-x-4">
+                <a href="#" class="hover:text-gray-300"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="hover:text-gray-300"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="hover:text-gray-300"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
