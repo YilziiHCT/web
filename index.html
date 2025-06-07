@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>portofolio sanzy - Ultra Premium Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="font-inter bg-gray-50 transition-all duration-500" id="theme-body">
+    <!-- Theme Toggle -->
+    <button id="theme-toggle" class="fixed top-6 right-6 bg-gradient-to-r from-purple-600 to-indigo-600 text-white p-3 rounded-full shadow-xl hover:from-purple-700 hover:to-indigo-700 transition-all z-50">
+        <i class="fas fa-moon text-lg"></i>
+    </button>
+
+    <!-- Header -->
+    <header class="bg-gradient-to-r from-purple-900 via-indigo-900 to-blue-900 text-white shadow-2xl sticky top-0 z-40">
+        <div class="container mx-auto px-6 py-5 flex justify-between items-center">
+            <h1 class="text-4xl font-extrabold tracking-tight">portofolio sanzy</h1>
+            <nav class="hidden md:flex space-x-8">
+                <a href="#home" class="hover:text-purple-300 transition-all font-semibold">Home</a>
+                <a href="#about" class="hover:text-purple-300 transition-all font-semibold">About</a>
+                <a href="#projects" class="hover:text-purple-300 transition-all font-semibold">Projects</a>
+                <a href="#contact" class="hover:text-purple-300 transition-all font-semibold">Contact</a>
+            </nav>
+            <button id="menu-toggle" class="md:hidden text-3xl text-white">☰</button>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-gradient-to-r from-purple-800 to-indigo-800 text-white">
+            <a href="#home" class="block px-6 py-4 hover:bg-purple-900 transition">Home</a>
+            <a href="#about" class="block px-6 py-4 hover:bg-purple-900 transition">About</a>
+            <a href="#projects" class="block px-6 py-4 hover:bg-purple-900 transition">Projects</a>
+            <a href="#contact" class="block px-6 py-4 hover:bg-purple-900 transition">Contact</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white relative overflow-hidden">
+        <div class="absolute inset-0 bg-[url('https://source.unsplash.com/random/1920x1080?abstract')] bg-cover bg-center opacity-20"></div>
+        <div class="container mx-auto px-6 text-center relative z-10">
+            <h2 class="text-6xl md:text-7xl font-extrabold mb-6 animate__animated animate__fadeInDown">Welcome to portofolio sanzy</h2>
+            <p class="text-2xl md:text-3xl mb-10 animate__animated animate__fadeIn" style="animation-delay: 0.3s">Unleashing Creativity with Cutting-Edge Web Experiences</p>
+            <a href="#projects" class="bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-10 py-4 rounded-full hover:from-purple-700 hover:to-indigo-700 transition-all text-xl font-semibold shadow-lg">Discover My Work</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-24 bg-white dark:bg-gray-900 dark:text-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-5xl font-extrabold text-center mb-16 text-gray-800 dark:text-white animate__animated animate__fadeIn">About Me</h2>
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <img src="https://via.placeholder.com/400" alt="Profile" class="w-80 h-80 rounded-2xl shadow-2xl transform hover:scale-105 transition-transform duration-500">
+                <div class="space-y-6">
+                    <p class="text-xl text-gray-700 dark:text-gray-200 leading-relaxed">I'm a visionary web developer crafting immersive digital experiences with a blend of artistry and technology.</p>
+                    <p class="text-xl text-gray-700 dark:text-gray-200 leading-relaxed">My passion lies in pushing boundaries, creating stunning visuals, and delivering seamless user interactions.</p>
+                    <a href="#contact" class="inline-block bg-indigo-600 text-white px-8 py-3 rounded-full hover:bg-indigo-700 transition-all">Connect with Me</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-24 bg-gray-100 dark:bg-gray-800 dark:text-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-5xl font-extrabold text-center mb-16 text-gray-800 dark:text-white animate__animated animate__fadeIn">My Projects</h2>
+            <div class="flex justify-center mb-12 space-x-4">
+                <button class="filter-btn active px-6 py-3 bg-gradient-to-r from-purple-600 to-indigo-600 text-white rounded-full shadow-md hover:from-purple-700 hover:to-indigo-700 transition" data-filter="all">All</button>
+                <button class="filter-btn px-6 py-3 bg-gray-300 text-gray-800 rounded-full shadow-md hover:bg-gray-400 transition" data-filter="web">Web</button>
+                <button class="filter-btn px-6 py-3 bg-gray-300 text-gray-800 rounded-full shadow-md hover:bg-gray-400 transition" data-filter="app">App</button>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10 project-grid">
+                <div class="bg-white dark:bg-gray-900 rounded-2xl shadow-xl overflow-hidden project-card transform hover:scale-105 transition-transform duration-500" data-category="web">
+                    <img src="https://via.placeholder.com/500" alt="Project 1" class="w-full h-56 object-cover">
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold mb-3">Interactive Web App</h3>
+                        <p class="text-gray-600 dark:text-gray-300">A dynamic web application with real-time features and stunning animations.</p>
+                    </div>
+                </div>
+                <div class="bg-white dark:bg-gray-900 rounded-2xl shadow-xl overflow-hidden project-card transform hover:scale-105 transition-transform duration-500" data-category="app">
+                    <img src="https://via.placeholder.com/500" alt="Project 2" class="w-full h-56 object-cover">
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold mb-3">Mobile-First App</h3>
+                        <p class="text-gray-600 dark:text-gray-300">A seamless cross-platform app with cutting-edge UX design.</p>
+                    </div>
+                </div>
+                <div class="bg-white dark:bg-gray-900 rounded-2xl shadow-xl overflow-hidden project-card transform hover:scale-105 transition-transform duration-500" data-category="web">
+                    <img src="https://via.placeholder.com/500" alt="Project 3" class="w-full h-56 object-cover">
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold mb-3">Creative Portfolio</h3>
+                        <p class="text-gray-600 dark:text-gray-300">A visually striking portfolio showcasing innovative designs.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 bg-gradient-to-r from-gray-900 to-indigo-900 text-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-5xl font-extrabold text-center mb-16">Get in Touch</h2>
+            <form id="contact-form" class="max-w-2xl mx-auto space-y-6">
+                <div>
+                    <label for="name" class="block text-lg font-semibold mb-2">Name</label>
+                    <input type="text" id="name" class="w-full p-4 rounded-lg bg-gray-800 border border-gray-700 focus:outline-none focus:border-purple-600 transition" required>
+                    <p class="text-red-400 text-sm mt-2 hidden" id="name-error">Name is required</p>
+                </div>
+                <div>
+                    <label for="email" class="block text-lg font-semibold mb-2">Email</label>
+                    <input type="email" id="email" class="w-full p-4 rounded-lg bg-gray-800 border border-gray-700 focus:outline-none focus:border-purple-600 transition" required>
+                    <p class="text-red-400 text-sm mt-2 hidden" id="email-error">Invalid email format</p>
+                </div>
+                <div>
+                    <label for="message" class="block text-lg font-semibold mb-2">Message</label>
+                    <textarea id="message" class="w-full p-4 rounded-lg bg-gray-800 border border-gray-700 focus:outline-none focus:border-purple-600 transition" rows="6" required></textarea>
+                    <p class="text-red-400 text-sm mt-2 hidden" id="message-error">Message is required</p>
+                </div>
+                <button type="submit" class="bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-10 py-4 rounded-full hover:from-purple-700 hover:to-indigo-700 transition w-full text-lg font-semibold shadow-lg">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-6 text-center">
+            <p class="text-lg">© 2025 portofolio sanzy. Crafted with Passion.</p>
+            <div class="mt-6 flex justify-center space-x-6">
+                <a href="#" class="hover:text-purple-300 transition"><i class="fab fa-instagram text-2xl"></i></a>
+                <a href="#" class="hover:text-purple-300 transition"><i class="fab fa-twitter text-2xl"></i></a>
+                <a href="#" class="hover:text-purple-300 transition"><i class="fab fa-linkedin text-2xl"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></script>
+    <script src="script.js"></script>
+</body>
+</html>
