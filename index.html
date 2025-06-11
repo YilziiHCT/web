@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>toko online - Premium E-Commerce</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="font-inter bg-gray-100 dark:bg-gray-900 transition-all duration-500">
+    <button id="theme-toggle" class="fixed top-4 right-4 bg-green-600 text-white p-3 rounded-full shadow-lg hover:bg-green-700">
+        <i class="fas fa-moon"></i>
+    </button>
+    <header class="bg-gradient-to-r from-green-600 to-teal-600 text-white sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <h1 class="text-3xl font-bold">toko online</h1>
+            <nav class="hidden md:flex space-x-6">
+                
+                <a href="#home" class="hover:text-green-300">Home</a>
+                <a href="#products" class="hover:text-green-300">Products</a>
+                <a href="#cart" class="hover:text-green-300">Cart</a>
+                <a href="#contact" class="hover:text-green-300">Contact</a>
+                
+            </nav>
+            <div class="flex items-center space-x-4">
+                
+                <a href="#cart" class="relative">
+                    <i class="fas fa-shopping-cart text-xl"></i>
+                    <span id="cart-count" class="absolute -top-2 -right-2 bg-red-600 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">0</span>
+                </a>
+                
+                <button id="menu-toggle" class="md:hidden text-2xl">☰</button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-green-500">
+            
+            <a href="#home" class="block px-6 py-3 hover:bg-green-600">Home</a>
+            <a href="#products" class="block px-6 py-3 hover:bg-green-600">Products</a>
+            <a href="#cart" class="block px-6 py-3 hover:bg-green-600">Cart</a>
+            <a href="#contact" class="block px-6 py-3 hover:bg-green-600">Contact</a>
+            
+        </div>
+    </header>
+    <section id="home" class="min-h-screen flex items-center bg-gradient-to-br from-green-700 to-teal-700 text-white">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-5xl md:text-6xl font-extrabold mb-6 animate__animated animate__fadeInDown">Shop at toko online</h2>
+            <p class="text-xl mb-8 animate__animated animate__fadeIn">Discover the best products with unbeatable prices!</p>
+            <a href="#products" class="bg-green-600 text-white px-8 py-3 rounded-full hover:bg-green-700">Shop Now</a>
+        </div>
+    </section>
+    
+    <section id="products" class="py-16 bg-white dark:bg-gray-800 dark:text-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-12">Our Products</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+                <div class="bg-white dark:bg-gray-700 rounded-lg shadow-lg p-6 product-card aspect-square">
+                    <img src="https://via.placeholder.com/300" alt="Product" class="w-full h-48 object-cover rounded">
+                    <h3 class="text-xl font-semibold mt-4">Product One</h3>
+                    <p class="text-gray-600 dark:text-gray-300">Rp 150,000</p>
+                    
+                    <button class="add-to-cart bg-green-600 text-white px-4 py-2 rounded-full mt-4 hover:bg-green-700" data-name="Product One" data-price="150000">Add to Cart</button>
+                    
+                </div>
+                <!-- More product cards -->
+            </div>
+        </div>
+    </section>
+    
+    
+    <section id="cart" class="py-16 bg-gray-100 dark:bg-gray-800 dark:text-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-12">Shopping Cart</h2>
+            <div id="cart-items" class="space-y-4">
+                <p class="text-center">Your cart is empty.</p>
+            </div>
+            <div class="text-right mt-8">
+                <p class="text-xl font-semibold">Total: <span id="cart-total">Rp 0</span></p>
+                <button id="checkout" class="bg-green-600 text-white px-6 py-3 rounded-full mt-4 hover:bg-green-700">Checkout</button>
+            </div>
+        </div>
+    </section>
+    
+    <section id="contact" class="py-16 bg-green-900 text-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-12">Contact Us</h2>
+            <form id="contact-form" class="max-w-lg mx-auto space-y-4">
+                <input type="text" id="name" class="w-full p-3 rounded-lg bg-gray-800 border border-gray-700" placeholder="Name" required>
+                <input type="email" id="email" class="w-full p-3 rounded-lg bg-gray-800 border border-gray-700" placeholder="Email" required>
+                <textarea id="message" class="w-full p-3 rounded-lg bg-gray-800 border border-gray-700" rows="5" placeholder="Message" required></textarea>
+                <button type="submit" class="bg-green-600 text-white px-6 py-3 rounded-full w-full">Send</button>
+            </form>
+        </div>
+    </section>
+    <footer class="bg-gray-900 text-white py-8">
+        <div class="container mx-auto px-6 text-center">
+            <p>© 2025 toko online. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></script>
+    <script src="script.js"></script>
+</body>
+</html>
