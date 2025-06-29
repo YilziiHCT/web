@@ -1,0 +1,244 @@
+/* CSS dengan animasi kompleks, responsif, dan efek visual modern */
+
+/* --- Import Google Fonts --- */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Poppins:wght@600;800&display=swap');
+
+/* --- CSS Variables --- */
+:root {
+    /* Light Mode */
+    --bg-light: #f4f7fc;
+    --bg-light-alt: #ffffff;
+    --text-light: #1e293b;
+    --text-light-secondary: #475569;
+    --primary-light: #4f46e5;
+    --primary-dark: #6366f1;
+    --glass-bg-light: rgba(255, 255, 255, 0.5);
+    --border-light: rgba(203, 213, 225, 0.5);
+
+    /* Shared */
+    --font-sans: 'Inter', sans-serif;
+    --font-display: 'Poppins', sans-serif;
+}
+
+html.dark {
+    /* Dark Mode */
+    --bg-dark: #0f172a; /* Deep blue/black */
+    --bg-dark-alt: #1e293b; /* Slate */
+    --bg-dark-footer: #0c1222;
+    --text-dark: #e2e8f0; /* Light gray */
+    --text-dark-secondary: #94a3b8; /* Slate 400 */
+    --primary-dark: #818cf8; /* Indigo 400 */
+    --glass-bg-dark: rgba(29, 39, 58, 0.5);
+    --border-dark: rgba(51, 65, 85, 0.5);
+}
+
+/* --- Base Styles --- */
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.font-inter { font-family: var(--font-sans); }
+.font-poppins { font-family: var(--font-display); }
+
+.bg-light-bg { background-color: var(--bg-light); }
+.bg-light-bg-alt { background-color: var(--bg-light-alt); }
+.text-light-text { color: var(--text-light); }
+.dark .bg-dark-bg { background-color: var(--bg-dark); }
+.dark .bg-dark-bg-alt { background-color: var(--bg-dark-alt); }
+.dark .bg-dark-bg-footer { background-color: var(--bg-dark-footer); }
+.dark .text-dark-text { color: var(--text-dark); }
+.dark .text-dark-text-secondary { color: var(--text-dark-secondary); }
+
+/* --- Preloader Animation --- */
+.loader {
+    width: 50px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    border: 8px solid #5142FC;
+    animation: l20-1 0.8s infinite linear alternate, l20-2 1.6s infinite linear;
+}
+@keyframes l20-1 {
+   0%    {clip-path: polygon(50% 50%,0 0,0    0,0    0,0    0,0    0)}
+   12.5% {clip-path: polygon(50% 50%,0 0,100% 0,100% 0,100% 0,100% 0)}
+   25%   {clip-path: polygon(50% 50%,0 0,100% 0,100% 100%,100% 100%,100% 100%)}
+   50%   {clip-path: polygon(50% 50%,0 0,100% 0,100% 100%,0 100%,0 100%)}
+   62.5% {clip-path: polygon(50% 50%,0 0,100% 0,100% 100%,0 100%,0 0)}
+   75%   {clip-path: polygon(50% 50%,0 0,100% 0,100% 100%,0 100%,0 0)}
+   87.5% {clip-path: polygon(50% 50%,0 0,100% 0,100% 100%,0 100%,0 0)}
+   100%  {clip-path: polygon(50% 50%,0 0,100% 0,100% 100%,0 100%,0 0)}
+}
+@keyframes l20-2 { 
+  0%    {transform:scaleY(1)  rotate(0deg)}
+  49.99%{transform:scaleY(1)  rotate(135deg)}
+  50%   {transform:scaleY(-1) rotate(-135deg)}
+  100%  {transform:scaleY(-1) rotate(-360deg)}
+}
+
+/* --- Hero Gradient Animation --- */
+.animated-gradient {
+    background: linear-gradient(-45deg, #0f0c29, #302b63, #24243e, #4f46e5);
+    background-size: 400% 400%;
+    animation: gradient-animation 15s ease infinite;
+}
+
+@keyframes gradient-animation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* --- Glassmorphism Effects --- */
+.glass-effect, .glass-effect-button, .glass-effect-deep, .skill-item {
+    backdrop-filter: blur(12px) saturate(180%);
+    -webkit-backdrop-filter: blur(12px) saturate(180%);
+    transition: background-color 0.3s, border-color 0.3s;
+}
+.glass-effect-button {
+    background: var(--glass-bg-light);
+    border: 1px solid var(--border-light);
+}
+.glass-effect-deep, .skill-item {
+    background-color: var(--glass-bg-light);
+    border: 1px solid var(--border-light);
+}
+.dark .glass-effect-button, .dark .glass-effect-deep, .dark .skill-item {
+    background-color: var(--glass-bg-dark);
+    border: 1px solid var(--border-dark);
+}
+
+/* --- Component Styles --- */
+#header {
+    transition: background-color 0.3s ease, padding 0.3s ease;
+}
+#header.scrolled {
+    background-color: var(--glass-bg-dark);
+    @apply py-2 shadow-lg glass-effect;
+}
+.dark #header.scrolled {
+    background-color: var(--glass-bg-dark);
+}
+.light #header.scrolled {
+     background-color: var(--glass-bg-light);
+}
+
+
+.nav-link {
+    @apply relative text-white font-medium tracking-wide transition-colors duration-300;
+}
+.nav-link::after {
+    content: '';
+    @apply absolute bottom-0 left-0 w-0 h-[2px] bg-primary-dark transition-all duration-300;
+}
+.nav-link:hover::after {
+    @apply w-full;
+}
+.nav-link-mobile {
+    @apply relative text-dark-text font-medium tracking-wide transition-colors duration-300 text-3xl;
+}
+.dark .nav-link-mobile {
+     color: var(--text-dark);
+}
+.light .nav-link-mobile {
+     color: var(--text-light);
+}
+
+.cta-button {
+    @apply inline-block px-8 py-4 bg-gradient-to-r from-indigo-500 to-purple-500 text-white font-bold rounded-lg shadow-lg transform transition-all duration-300;
+    @apply hover:scale-105 hover:shadow-2xl focus:outline-none focus:ring-4 focus:ring-indigo-500/50;
+}
+
+.section-title {
+    @apply text-4xl md:text-5xl font-poppins font-extrabold mb-4;
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 to-purple-400;
+}
+
+.social-icon {
+    @apply h-12 w-12 flex items-center justify-center rounded-full text-xl transition-all duration-300;
+    @apply text-light-text dark:text-dark-text border-2 border-gray-300 dark:border-gray-600;
+    @apply hover:bg-primary-light hover:text-white hover:border-primary-light dark:hover:bg-primary-dark dark:hover:text-white dark:hover:border-primary-dark hover:scale-110;
+}
+
+.skill-item {
+    @apply p-6 rounded-xl shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl;
+}
+
+.progress-bar-container {
+    @apply w-full bg-slate-200 dark:bg-slate-700 rounded-full h-2.5 overflow-hidden;
+}
+
+.progress-bar {
+    @apply h-2.5 rounded-full;
+    background: linear-gradient(to right, var(--primary-light), var(--primary-dark));
+    width: 0; /* Initial width for animation */
+}
+
+/* Projects */
+.filter-btn {
+    @apply px-5 py-2 rounded-full font-semibold transition-all duration-300 border-2 border-transparent;
+    @apply bg-light-bg-alt text-light-text-secondary dark:bg-dark-bg-alt dark:text-dark-text-secondary;
+}
+.filter-btn.active, .filter-btn:hover {
+    @apply text-white bg-gradient-to-r from-indigo-500 to-purple-500 shadow-md;
+}
+
+.project-card {
+    @apply relative aspect-video rounded-xl overflow-hidden cursor-pointer shadow-lg group;
+}
+.project-card img {
+    @apply w-full h-full object-cover transition-transform duration-500 group-hover:scale-110;
+}
+.project-overlay {
+    @apply absolute inset-0 bg-black/70 flex flex-col justify-end p-6 text-white;
+    @apply opacity-0 group-hover:opacity-100 transition-opacity duration-500 translate-y-8 group-hover:translate-y-0;
+}
+
+/* Contact Form */
+.form-group {
+    @apply relative;
+}
+
+.form-input {
+    @apply w-full px-4 py-3 bg-transparent border-2 rounded-lg outline-none transition-colors duration-300;
+    @apply border-gray-300 dark:border-gray-600 text-light-text dark:text-dark-text;
+    @apply focus:border-primary-light dark:focus:border-primary-dark;
+}
+
+.form-label {
+    @apply absolute left-4 top-3 text-light-text-secondary dark:text-dark-text-secondary transition-all duration-300 pointer-events-none;
+}
+/* This is a cool effect where the label moves up when you focus or type */
+.form-input:focus + .form-label,
+.form-input:not(:placeholder-shown) + .form-label {
+    @apply -top-2.5 left-3 text-xs px-1;
+    background-color: var(--bg-light-bg-alt);
+}
+.dark .form-input:focus + .form-label,
+.dark .form-input:not(:placeholder-shown) + .form-label {
+    background-color: var(--bg-dark-bg-alt);
+}
+
+.form-group.error .form-input {
+    @apply border-red-500;
+}
+
+.form-error-msg {
+    @apply text-red-500 text-xs mt-1 h-4;
+}
+
+/* Footer */
+.footer-social-icon {
+    @apply text-2xl text-dark-text-secondary transition-colors duration-300 hover:text-primary-dark;
+}
+
+/* Scroll-to-top */
+#scroll-to-top, #theme-toggle {
+    @apply text-primary-dark hover:bg-primary-dark hover:text-white dark:text-primary-light dark:hover:bg-primary-light dark:hover:text-dark-bg;
+}
+
+/* --- Responsiveness --- */
+@media (max-width: 767px) {
+    .section-title {
+        @apply text-3xl;
+    }
+}
