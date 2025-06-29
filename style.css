@@ -1,0 +1,41 @@
+/* Import font from Google Fonts (optional, but recommended for elegance) */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* Apply font to the body */
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Style for smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Custom hero section gradient */
+.hero-gradient {
+    background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+}
+
+/* Active navigation link style */
+.nav-link.active {
+    color: #0ea5e9; /* Corresponds to Tailwind's sky-500 */
+    font-weight: 600;
+}
+
+/* Custom scrollbar for a more futuristic look (works on Webkit browsers like Chrome, Safari, Edge) */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #0f172a; /* slate-900 */
+}
+
+::-webkit-scrollbar-thumb {
+    background: #38bdf8; /* sky-400 */
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #0ea5e9; /* sky-500 */
+}
