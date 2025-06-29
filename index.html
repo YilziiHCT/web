@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="portfolio profesional - Premium Portfolio showcasing creativity and innovation">
+    <meta name="keywords" content="portfolio profesional, portfolio, creative, professional">
+    <meta name="author" content="Yilzi Digital Store">
+    <title>portfolio profesional - Premium Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="font-inter bg-gray-50 dark:bg-gray-900 transition-all duration-500">
+    <button id="theme-toggle" class="fixed top-4 right-4 bg-indigo-600 text-white p-3 rounded-full shadow-lg hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 z-50">
+        <i class="fas fa-moon"></i>
+    </button>
+    <header class="bg-gradient-to-r from-indigo-800 to-purple-800 text-white sticky top-0 z-40 shadow-lg">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <h1 class="text-3xl font-bold">portfolio profesional</h1>
+            <nav class="hidden md:flex space-x-6">
+                <a href="#home" class="hover:text-indigo-300 transition-colors">Home</a>
+                <a href="#profile" class="hover:text-indigo-300 transition-colors">Profile</a>
+                <a href="#skills" class="hover:text-indigo-300 transition-colors">Skills</a>
+                
+                <a href="#contact" class="hover:text-indigo-300 transition-colors">Contact</a>
+            </nav>
+            <button id="menu-toggle" class="md:hidden text-2xl focus:outline-none">☰</button>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-indigo-700">
+            <a href="#home" class="block px-6 py-3 hover:bg-indigo-800 transition-colors">Home</a>
+            <a href="#profile" class="block px-6 py-3 hover:bg-indigo-800 transition-colors">Profile</a>
+            <a href="#skills" class="block px-6 py-3 hover:bg-indigo-800 transition-colors">Skills</a>
+            
+            <a href="#contact" class="block px-6 py-3 hover:bg-indigo-800 transition-colors">Contact</a>
+        </div>
+    </header>
+    <section id="home" class="min-h-screen flex items-center bg-gradient-to-br from-indigo-900 to-purple-900 text-white">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-5xl md:text-6xl font-extrabold mb-6 animate__animated animate__fadeInDown">Welcome to portfolio profesional</h2>
+            <p class="text-xl mb-8 animate__animated animate__fadeIn">Explore creativity and innovation with stunning visuals</p>
+            <a href="#projects" class="bg-indigo-600 text-white px-8 py-3 rounded-full hover:bg-indigo-700 transition-all duration-300">Explore Projects</a>
+        </div>
+    </section>
+    
+    <section id="profile" class="py-16 bg-white dark:bg-gray-800 dark:text-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-12 animate__animated animate__fadeIn">My Profile</h2>
+            <div class="flex flex-col md:flex-row gap-8 items-center">
+                <img src="https://via.placeholder.com/300" alt="Profile" class="w-64 h-64 rounded-full shadow-lg object-cover transition-transform hover:scale-105 lazyload">
+                <div>
+                    <h3 class="text-2xl font-semibold mb-4">About Me</h3>
+                    <p class="text-lg">Passionate about creating stunning web experiences with a focus on user engagement and innovation.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+    <section id="skills" class="py-16 bg-gray-100 dark:bg-gray-700 dark:text-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-12 animate__animated animate__fadeIn">My Skills</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 text-center hover:shadow-xl transition-all duration-300">
+                    <i class="fas fa-code text-4xl text-indigo-600 mb-4"></i>
+                    <h3 class="text-xl font-semibold">Web Development</h3>
+                    <p class="text-gray-600 dark:text-gray-300">HTML5, CSS3, JavaScript, React, Next.js</p>
+                </div>
+                <div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 text-center hover:shadow-xl transition-all duration-300">
+                    <i class="fas fa-paint-brush text-4xl text-indigo-600 mb-4"></i>
+                    <h3 class="text-xl font-semibold">UI/UX Design</h3>
+                    <p class="text-gray-600 dark:text-gray-300">Figma, Adobe XD, Sketch</p>
+                </div>
+                <div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 text-center hover:shadow-xl transition-all duration-300">
+                    <i class="fas fa-server text-4xl text-indigo-600 mb-4"></i>
+                    <h3 class="text-xl font-semibold">Backend</h3>
+                    <p class="text-gray-600 dark:text-gray-300">Node.js, Express, MongoDB</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+    
+    <section id="contact" class="py-16 bg-indigo-900 text-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-12 animate__animated animate__fadeIn">Contact Me</h2>
+            <form id="contact-form" class="max-w-lg mx-auto space-y-4">
+                <input type="text" id="name" class="w-full p-3 rounded-lg bg-gray-800 border border-gray-700 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500" placeholder="Name" required>
+                <input type="email" id="email" class="w-full p-3 rounded-lg bg-gray-800 border border-gray-700 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500" placeholder="Email" required>
+                <textarea id="message" class="w-full p-3 rounded-lg bg-gray-800 border border-gray-700 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500" rows="5" placeholder="Message" required></textarea>
+                <button type="button" id="submit-contact" class="bg-indigo-600 text-white px-6 py-3 rounded-full w-full hover:bg-indigo-700 transition-all duration-300">Send</button>
+            </form>
+        </div>
+    </section>
+    
+    <footer class="bg-gray-900 text-white py-8">
+        <div class="container mx-auto px-6 text-center">
+            <p>© 2025 portfolio profesional. All rights reserved.</p>
+            <div class="mt-4 flex justify-center space-x-4">
+                <a href="@yilzi_dominan" class="text-indigo-300 hover:text-indigo-500"><i class="fab fa-instagram"></i></a>
+                <a href="@yilziii" class="text-indigo-300 hover:text-indigo-500"><i class="fab fa-tiktok"></i></a>
+                <a href="Yilzi Digital Store" class="text-indigo-300 hover:text-indigo-500"><i class="fab fa-facebook"></i></a>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
