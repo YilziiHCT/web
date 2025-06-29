@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<!-- Website portfolio ultra-premium ini dibuat dengan fokus pada estetika futuristik, performa tinggi, dan interaktivitas canggih. Ditenagai oleh Yilzi Digital Store. -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO Meta Tags -->
+    <title>Yilzi Digital Portfolio | Portfolio Profesional Futuristik</title>
+    <meta name="description" content="Portfolio profesional Yilzi. Menampilkan keahlian dalam web development, UI/UX, dan desain digital dengan sentuhan futuristik dan modern.">
+    <meta name="keywords" content="yilzi, portfolio, web developer, ui/ux designer, futuristic portfolio, portfolio profesional, tailwind css, gsap, modern website, yilzi digital portfolio">
+    <meta name="author" content="Yilzi Digital Store">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yilziihct.github.io/"> <!-- Ganti dengan URL domain Anda -->
+    <meta property="og:title" content="Yilzi Digital Portfolio | Portfolio Profesional Futuristik">
+    <meta property="og:description" content="Jelajahi portofolio futuristik dari Yilzi, menampilkan proyek-proyek inovatif dalam pengembangan web dan desain.">
+    <meta property="og:image" content="https://qu.ax/orgnm.jpg"> <!-- Gambar untuk social sharing -->
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://yilziihct.github.io/"> <!-- Ganti dengan URL domain Anda -->
+    <meta property="twitter:title" content="Yilzi Digital Portfolio | Portfolio Profesional Futuristik">
+    <meta property="twitter:description" content="Portfolio futuristik dari Yilzi. Web Development & Desain UI/UX.">
+    <meta property="twitter:image" content="https://qu.ax/orgnm.jpg">
+
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✨</text></svg>">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;800&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- Frameworks & Libraries CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body class="bg-white dark:bg-slate-900 text-slate-800 dark:text-slate-200 font-sans transition-colors duration-500">
+    
+    <!-- Preloader -->
+    <div id="preloader" class="fixed inset-0 z-[100] flex items-center justify-center bg-slate-900">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Header -->
+    <header id="header" class="fixed top-0 left-0 w-full z-50 transition-all duration-300">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#home" class="text-2xl md:text-3xl font-extrabold font-heading text-white tracking-wider animate-pulse">
+                YILZI
+            </a>
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="#about" class="nav-link">Profil</a>
+                <a href="#skills" class="nav-link">Keahlian</a>
+                <a href="#projects" class="nav-link">Proyek</a>
+                <a href="#contact" class="nav-link">Kontak</a>
+            </div>
+            <div class="flex items-center space-x-4">
+                 <button id="theme-toggle" class="text-xl text-sky-400 hover:text-white transition-colors" aria-label="Toggle dark/light mode">
+                    <i class="fas fa-sun"></i> <!-- Icon akan diubah oleh JS -->
+                </button>
+                 <button id="mobile-menu-button" class="md:hidden text-2xl text-white">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-slate-800/80 backdrop-blur-md">
+            <a href="#about" class="block py-3 px-6 text-white text-center hover:bg-sky-500/50">Profil</a>
+            <a href="#skills" class="block py-3 px-6 text-white text-center hover:bg-sky-500/50">Keahlian</a>
+            <a href="#projects" class="block py-3 px-6 text-white text-center hover:bg-sky-500/50">Proyek</a>
+            <a href="#contact" class="block py-3 px-6 text-white text-center hover:bg-sky-500/50">Kontak</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-indigo-900 via-purple-900 to-slate-900">
+            <div class="absolute inset-0 bg-grid-pattern opacity-20"></div>
+            <div class="text-center z-10 px-4 hero-content">
+                <h1 class="text-4xl md:text-6xl lg:text-7xl font-extrabold text-white font-heading leading-tight mb-4">
+                    <span class="animate-text-reveal">YILZI</span> 
+                    <span class="animate-text-reveal">DIGITAL</span> 
+                    <span class="animate-text-reveal">PORTFOLIO</span>
+                </h1>
+                <p class="text-lg md:text-2xl text-sky-300 max-w-3xl mx-auto typewriter"></p>
+                <a href="#projects" class="cta-button mt-8">
+                    Lihat Proyek Saya <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+        </section>
+
+        <!-- Profile Section -->
+        <section id="about" class="py-20 md:py-32 scroll-section">
+            <div class="container mx-auto px-6 grid md:grid-cols-5 gap-12 items-center">
+                <div class="md:col-span-2 flex justify-center">
+                    <div class="relative group">
+                        <img data-src="https://qu.ax/orgnm.jpg" alt="Foto Profil Yilzi" class="lazyload rounded-full w-60 h-60 md:w-80 md:h-80 object-cover border-4 border-purple-500 shadow-lg shadow-purple-500/30 transition-all duration-300 group-hover:scale-105">
+                        <div class="absolute inset-0 rounded-full border-4 border-sky-400 opacity-0 group-hover:opacity-100 group-hover:animate-ping-slow transition-opacity duration-300"></div>
+                    </div>
+                </div>
+                <div class="md:col-span-3 text-center md:text-left">
+                    <h2 class="section-title">Profil Saya</h2>
+                    <p class="section-subtitle">
+                        Saya seorang profesional digital dengan passion untuk menciptakan solusi web yang modern, efisien, dan elegan. Dengan keahlian dalam pengembangan front-end dan back-end serta mata yang tajam untuk desain UI/UX, saya bertujuan untuk mengubah ide kompleks menjadi pengalaman digital yang intuitif dan menarik.
+                    </p>
+                    <div class="mt-8 flex justify-center md:justify-start space-x-5">
+                        <a href="https://wa.me/6281359123789" target="_blank" class="social-icon" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://instagram.com/yilzi_dominan" target="_blank" class="social-icon" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://tiktok.com/@yilziii" target="_blank" class="social-icon" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                        <a href="https://github.com/yilziihct" target="_blank" class="social-icon" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="py-20 md:py-32 bg-slate-50 dark:bg-slate-900/50 scroll-section">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="section-title">Keahlian & Teknologi</h2>
+                <div class="mt-12 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+                    <!-- Skill Item -->
+                    <div class="skill-item" data-progress="95">
+                        <div class="text-5xl text-sky-400 mb-3"><i class="fab fa-html5"></i></div>
+                        <h3 class="text-xl font-bold font-heading">HTML5</h3>
+                        <div class="skill-progress-bar"><div class="skill-progress-fill"></div></div>
+                    </div>
+                    <!-- Skill Item -->
+                    <div class="skill-item" data-progress="90">
+                        <div class="text-5xl text-sky-400 mb-3"><i class="fab fa-css3-alt"></i></div>
+                        <h3 class="text-xl font-bold font-heading">CSS3 & Tailwind</h3>
+                        <div class="skill-progress-bar"><div class="skill-progress-fill"></div></div>
+                    </div>
+                    <!-- Skill Item -->
+                    <div class="skill-item" data-progress="85">
+                        <div class="text-5xl text-sky-400 mb-3"><i class="fab fa-js-square"></i></div>
+                        <h3 class="text-xl font-bold font-heading">JavaScript (ES6+)</h3>
+                        <div class="skill-progress-bar"><div class="skill-progress-fill"></div></div>
+                    </div>
+                     <!-- Skill Item -->
+                    <div class="skill-item" data-progress="80">
+                        <div class="text-5xl text-sky-400 mb-3"><i class="fab fa-react"></i></div>
+                        <h3 class="text-xl font-bold font-heading">React & Next.js</h3>
+                        <div class="skill-progress-bar"><div class="skill-progress-fill"></div></div>
+                    </div>
+                    <!-- Skill Item -->
+                    <div class="skill-item" data-progress="75">
+                        <div class="text-5xl text-sky-400 mb-3"><i class="fab fa-node-js"></i></div>
+                        <h3 class="text-xl font-bold font-heading">Node.js</h3>
+                        <div class="skill-progress-bar"><div class="skill-progress-fill"></div></div>
+                    </div>
+                     <!-- Skill Item -->
+                    <div class="skill-item" data-progress="90">
+                        <div class="text-5xl text-sky-400 mb-3"><i class="fab fa-figma"></i></div>
+                        <h3 class="text-xl font-bold font-heading">UI/UX Design</h3>
+                        <div class="skill-progress-bar"><div class="skill-progress-fill"></div></div>
+                    </div>
+                    <!-- Skill Item -->
+                    <div class="skill-item" data-progress="80">
+                        <div class="text-5xl text-sky-400 mb-3"><i class="fas fa-database"></i></div>
+                        <h3 class="text-xl font-bold font-heading">SQL & NoSQL</h3>
+                        <div class="skill-progress-bar"><div class="skill-progress-fill"></div></div>
+                    </div>
+                    <!-- Skill Item -->
+                    <div class="skill-item" data-progress="85">
+                        <div class="text-5xl text-sky-400 mb-3"><i class="fab fa-git-alt"></i></div>
+                        <h3 class="text-xl font-bold font-heading">Git & GitHub</h3>
+                        <div class="skill-progress-bar"><div class="skill-progress-fill"></div></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Projects Gallery -->
+        <section id="projects" class="py-20 md:py-32 scroll-section">
+            <div class="container mx-auto px-6">
+                <h2 class="section-title text-center">Proyek Unggulan</h2>
+                <!-- Filter Buttons -->
+                <div id="project-filters" class="flex flex-wrap justify-center gap-2 md:gap-4 my-8">
+                    <button class="filter-btn active" data-filter="all">Semua</button>
+                    <button class="filter-btn" data-filter="web">Web Development</button>
+                    <button class="filter-btn" data-filter="uiux">UI/UX Design</button>
+                    <button class="filter-btn" data-filter="mobile">Mobile App</button>
+                </div>
+
+                <!-- Project Grid -->
+                <div id="project-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Project Card 1 -->
+                    <div class="project-card" data-category="web">
+                        <img data-src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&w=1200" alt="Proyek Web" class="lazyload project-image">
+                        <div class="project-overlay">
+                            <h3 class="text-xl font-bold">Aplikasi Web E-commerce</h3>
+                            <p class="text-sm">Platform e-commerce dengan arsitektur modern.</p>
+                        </div>
+                    </div>
+                    <!-- Project Card 2 -->
+                    <div class="project-card" data-category="uiux">
+                        <img data-src="https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&w=1200" alt="Proyek UI/UX" class="lazyload project-image">
+                        <div class="project-overlay">
+                            <h3 class="text-xl font-bold">Desain Aplikasi Finansial</h3>
+                            <p class="text-sm">Desain UI/UX untuk aplikasi fintech.</p>
+                        </div>
+                    </div>
+                    <!-- Project Card 3 -->
+                    <div class="project-card" data-category="mobile">
+                        <img data-src="https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&w=1200" alt="Proyek Mobile" class="lazyload project-image">
+                        <div class="project-overlay">
+                            <h3 class="text-xl font-bold">Aplikasi Mobile Travel</h3>
+                            <p class="text-sm">Aplikasi mobile untuk perencanaan perjalanan.</p>
+                        </div>
+                    </div>
+                     <!-- Project Card 4 -->
+                    <div class="project-card" data-category="web">
+                        <img data-src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&w=1200" alt="Proyek Landing Page" class="lazyload project-image">
+                        <div class="project-overlay">
+                            <h3 class="text-xl font-bold">Landing Page Interaktif</h3>
+                            <p class="text-sm">Landing page dengan animasi GSAP.</p>
+                        </div>
+                    </div>
+                     <!-- Project Card 5 -->
+                    <div class="project-card" data-category="uiux">
+                        <img data-src="https://images.unsplash.com/photo-1558655146-364adaf1fcc9?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&w=1200" alt="Proyek Desain" class="lazyload project-image">
+                        <div class="project-overlay">
+                            <h3 class="text-xl font-bold">Branding Digital Agency</h3>
+                            <p class="text-sm">Desain identitas visual untuk agensi.</p>
+                        </div>
+                    </div>
+                     <!-- Project Card 6 -->
+                    <div class="project-card" data-category="web">
+                        <img data-src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&w=1200" alt="Proyek Dashboard" class="lazyload project-image">
+                        <div class="project-overlay">
+                            <h3 class="text-xl font-bold">Dashboard Analitik</h3>
+                            <p class="text-sm">Dashboard visualisasi data interaktif.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-20 md:py-32 bg-slate-50 dark:bg-slate-900/50 scroll-section">
+            <div class="container mx-auto px-6">
+                <h2 class="section-title text-center">Hubungi Saya</h2>
+                <p class="section-subtitle text-center max-w-2xl mx-auto">
+                    Punya proyek menarik atau hanya ingin menyapa? Jangan ragu untuk mengirimkan pesan. Mari kita ciptakan sesuatu yang luar biasa bersama.
+                </p>
+                <form id="contact-form" class="max-w-3xl mx-auto mt-12 space-y-6" novalidate>
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <input type="text" name="name" id="name" placeholder="Nama Anda" class="form-input" required>
+                            <p class="error-message"></p>
+                        </div>
+                        <div>
+                            <input type="email" name="email" id="email" placeholder="Email Anda" class="form-input" required>
+                            <p class="error-message"></p>
+                        </div>
+                    </div>
+                    <div>
+                        <input type="text" name="subject" id="subject" placeholder="Subjek" class="form-input" required>
+                        <p class="error-message"></p>
+                    </div>
+                    <div>
+                        <textarea name="message" id="message" placeholder="Pesan Anda..." class="form-input" rows="5" required></textarea>
+                         <p class="error-message"></p>
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" class="cta-button">
+                           Kirim Pesan <i class="fas fa-paper-plane ml-2"></i>
+                        </button>
+                    </div>
+                    <div id="form-feedback" class="text-center mt-4"></div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gradient-to-r from-indigo-900 to-purple-900 text-slate-300 py-10">
+        <div class="container mx-auto px-6 text-center">
+             <div class="mb-6 flex justify-center space-x-6">
+                <a href="https://wa.me/6281359123789" target="_blank" class="footer-social-icon" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                <a href="https://instagram.com/yilzi_dominan" target="_blank" class="footer-social-icon" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://tiktok.com/@yilziii" target="_blank" class="footer-social-icon" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                <a href="https://github.com/yilziihct" target="_blank" class="footer-social-icon" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            </div>
+            <p>&copy; <span id="current-year"></span> Yilzi Digital Portfolio. All Rights Reserved.</p>
+            <p class="text-sm mt-2 opacity-70">Powered by 🌟 YILZI DIGITAL STORE 🌟</p>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button id="scroll-to-top" class="fixed bottom-6 right-6 w-12 h-12 rounded-full bg-sky-500 text-white flex items-center justify-center text-xl shadow-lg hover:bg-sky-600 transition-all duration-300 transform translate-y-20 opacity-0 z-40" aria-label="Scroll to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+    
+    <!-- JavaScript Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/lazysizes.min.js" async=""></script>
+    
+    <!-- Custom JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+</html>
