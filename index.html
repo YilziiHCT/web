@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nama Anda | Portfolio Profesional</title>
+
+    <!-- Tailwind CSS (via CDN) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Boxicons (for icons) -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body class="bg-slate-900 text-slate-300 font-sans">
+
+    <!-- Header / Navbar -->
+    <header id="header" class="bg-slate-900/80 backdrop-blur-sm fixed top-0 left-0 w-full z-50 transition-all duration-300">
+        <nav class="container mx-auto max-w-6xl px-4 h-20 flex justify-between items-center">
+            <a href="#home" class="text-2xl font-bold text-sky-400">Portfolio.</a>
+            
+            <div class="hidden md:flex space-x-8">
+                <a href="#home" class="nav-link hover:text-sky-400 transition-colors">Home</a>
+                <a href="#profile" class="nav-link hover:text-sky-400 transition-colors">Profil</a>
+                <a href="#skills" class="nav-link hover:text-sky-400 transition-colors">Skills</a>
+                <a href="#contact" class="nav-link hover:text-sky-400 transition-colors">Kontak</a>
+            </div>
+
+            <button id="mobile-menu-button" class="md:hidden text-3xl">
+                <i class='bx bx-menu'></i>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden fixed inset-0 bg-slate-900 z-40">
+        <div class="flex flex-col items-center justify-center h-full space-y-8">
+            <a href="#home" class="mobile-nav-link text-2xl hover:text-sky-400 transition-colors">Home</a>
+            <a href="#profile" class="mobile-nav-link text-2xl hover:text-sky-400 transition-colors">Profil</a>
+            <a href="#skills" class="mobile-nav-link text-2xl hover:text-sky-400 transition-colors">Skills</a>
+            <a href="#contact" class="mobile-nav-link text-2xl hover:text-sky-400 transition-colors">Kontak</a>
+        </div>
+    </div>
+
+
+    <main class="container mx-auto max-w-6xl px-4 pt-20">
+        <!-- Home Section -->
+        <section id="home" class="min-h-screen flex flex-col justify-center items-center text-center hero-gradient">
+            <div class="hero-text">
+                <h3 class="text-3xl md:text-4xl font-light mb-2">Halo, saya</h3>
+                <h1 class="text-5xl md:text-7xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-sky-400 to-cyan-300">Nama Anda</h1>
+                <h2 class="text-2xl md:text-3xl font-semibold mb-6">Saya seorang <span class="typed-text text-sky-400"></span></h2>
+                <p class="max-w-2xl mx-auto mb-8 text-slate-400">Selamat datang di portfolio saya. Saya menciptakan solusi digital yang elegan, modern, dan fungsional untuk web.</p>
+                <div class="flex justify-center space-x-6 text-3xl">
+                    <a href="#" class="hover:text-sky-400 transition-colors"><i class='bx bxl-linkedin-square'></i></a>
+                    <a href="#" class="hover:text-sky-400 transition-colors"><i class='bx bxl-github'></i></a>
+                    <a href="#" class="hover:text-sky-400 transition-colors"><i class='bx bxl-instagram'></i></a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Profile Section -->
+        <section id="profile" class="py-24">
+            <h2 class="section-title text-4xl font-bold text-center mb-12">Tentang Saya</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div class="profile-img">
+                    <img src="https://via.placeholder.com/400x400/1e293b/94a3b8?text=Foto+Anda" alt="Foto Profil" class="rounded-lg shadow-lg shadow-sky-900/50 w-full max-w-sm mx-auto">
+                </div>
+                <div class="profile-text">
+                    <h3 class="text-3xl font-semibold mb-4 text-sky-400">Profesional yang Bersemangat</h3>
+                    <p class="mb-4 text-slate-400">Saya adalah seorang pengembang web dengan pengalaman lebih dari 5 tahun dalam menciptakan aplikasi web yang responsif dan berkinerja tinggi. Saya memiliki hasrat untuk mempelajari teknologi baru dan menerapkannya dalam proyek-proyek yang menantang.</p>
+                    <p class="mb-6 text-slate-400">Fokus saya adalah pada pengembangan front-end dengan React dan Vue, namun saya juga mahir dalam backend menggunakan Node.js. Tujuan utama saya adalah mengubah ide-ide kompleks menjadi produk digital yang intuitif dan mudah digunakan.</p>
+                    <a href="#contact" class="inline-block bg-sky-500 text-white font-bold py-3 px-6 rounded-md hover:bg-sky-600 transition-all duration-300 shadow-lg shadow-sky-500/30">Hubungi Saya</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="py-24">
+            <h2 class="section-title text-4xl font-bold text-center mb-12">Keahlian Saya</h2>
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 text-center">
+                <!-- Skill Card -->
+                <div class="skill-card bg-slate-800 p-6 rounded-lg hover:bg-slate-700 hover:-translate-y-2 transition-all duration-300 cursor-pointer">
+                    <i class='bx bxl-html5 text-6xl text-orange-500'></i>
+                    <h3 class="mt-4 font-semibold text-lg">HTML5</h3>
+                </div>
+                <!-- Skill Card -->
+                <div class="skill-card bg-slate-800 p-6 rounded-lg hover:bg-slate-700 hover:-translate-y-2 transition-all duration-300 cursor-pointer">
+                    <i class='bx bxl-css3 text-6xl text-blue-500'></i>
+                    <h3 class="mt-4 font-semibold text-lg">CSS3</h3>
+                </div>
+                <!-- Skill Card -->
+                <div class="skill-card bg-slate-800 p-6 rounded-lg hover:bg-slate-700 hover:-translate-y-2 transition-all duration-300 cursor-pointer">
+                    <i class='bx bxl-javascript text-6xl text-yellow-400'></i>
+                    <h3 class="mt-4 font-semibold text-lg">JavaScript</h3>
+                </div>
+                <!-- Skill Card -->
+                <div class="skill-card bg-slate-800 p-6 rounded-lg hover:bg-slate-700 hover:-translate-y-2 transition-all duration-300 cursor-pointer">
+                    <i class='bx bxl-tailwind-css text-6xl text-teal-400'></i>
+                    <h3 class="mt-4 font-semibold text-lg">Tailwind CSS</h3>
+                </div>
+                <!-- Skill Card -->
+                <div class="skill-card bg-slate-800 p-6 rounded-lg hover:bg-slate-700 hover:-translate-y-2 transition-all duration-300 cursor-pointer">
+                    <i class='bx bxl-react text-6xl text-sky-400'></i>
+                    <h3 class="mt-4 font-semibold text-lg">React</h3>
+                </div>
+                 <!-- Skill Card -->
+                 <div class="skill-card bg-slate-800 p-6 rounded-lg hover:bg-slate-700 hover:-translate-y-2 transition-all duration-300 cursor-pointer">
+                    <i class='bx bxl-nodejs text-6xl text-green-500'></i>
+                    <h3 class="mt-4 font-semibold text-lg">Node.js</h3>
+                </div>
+                <!-- Skill Card -->
+                <div class="skill-card bg-slate-800 p-6 rounded-lg hover:bg-slate-700 hover:-translate-y-2 transition-all duration-300 cursor-pointer">
+                    <i class='bx bxl-figma text-6xl text-purple-500'></i>
+                    <h3 class="mt-4 font-semibold text-lg">Figma</h3>
+                </div>
+                 <!-- Skill Card -->
+                 <div class="skill-card bg-slate-800 p-6 rounded-lg hover:bg-slate-700 hover:-translate-y-2 transition-all duration-300 cursor-pointer">
+                    <i class='bx bxl-git text-6xl text-red-500'></i>
+                    <h3 class="mt-4 font-semibold text-lg">Git</h3>
+                </div>
+                 <!-- Skill Card -->
+                 <div class="skill-card bg-slate-800 p-6 rounded-lg hover:bg-slate-700 hover:-translate-y-2 transition-all duration-300 cursor-pointer">
+                    <i class='bx bxl-python text-6xl text-blue-400'></i>
+                    <h3 class="mt-4 font-semibold text-lg">Python</h3>
+                </div>
+                 <!-- Skill Card -->
+                 <div class="skill-card bg-slate-800 p-6 rounded-lg hover:bg-slate-700 hover:-translate-y-2 transition-all duration-300 cursor-pointer">
+                    <i class='bx bxl-docker text-6xl text-sky-600'></i>
+                    <h3 class="mt-4 font-semibold text-lg">Docker</h3>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-24">
+            <h2 class="section-title text-4xl font-bold text-center mb-12">Hubungi Saya</h2>
+            <div class="max-w-2xl mx-auto bg-slate-800 p-8 rounded-lg shadow-lg">
+                <p class="text-center text-slate-400 mb-8">Tertarik untuk bekerja sama atau punya pertanyaan? Jangan ragu untuk menghubungi saya melalui formulir di bawah ini.</p>
+                <form action="#" method="POST" class="space-y-6">
+                    <div>
+                        <label for="name" class="block mb-2 text-sm font-medium">Nama Lengkap</label>
+                        <input type="text" id="name" name="name" class="w-full bg-slate-700 border border-slate-600 rounded-md py-2 px-3 focus:outline-none focus:ring-2 focus:ring-sky-500" required>
+                    </div>
+                    <div>
+                        <label for="email" class="block mb-2 text-sm font-medium">Alamat Email</label>
+                        <input type="email" id="email" name="email" class="w-full bg-slate-700 border border-slate-600 rounded-md py-2 px-3 focus:outline-none focus:ring-2 focus:ring-sky-500" required>
+                    </div>
+                    <div>
+                        <label for="message" class="block mb-2 text-sm font-medium">Pesan</for>
+                        <textarea id="message" name="message" rows="5" class="w-full bg-slate-700 border border-slate-600 rounded-md py-2 px-3 focus:outline-none focus:ring-2 focus:ring-sky-500" required></textarea>
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" class="bg-sky-500 text-white font-bold py-3 px-8 rounded-md hover:bg-sky-600 transition-all duration-300 shadow-lg shadow-sky-500/30 w-full sm:w-auto">Kirim Pesan</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 border-t border-slate-800">
+        <div class="container mx-auto max-w-6xl px-4 py-6 text-center text-slate-500">
+            <p>&copy; 2024 Nama Anda. Dibuat dengan <i class='bx bxs-heart text-red-500'></i> dan Tailwind CSS.</p>
+        </div>
+    </footer>
+
+
+    <!-- ScrollReveal.js (for scroll animations) -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    
+    <!-- Typed.js (for typing effect) -->
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    
+    <!-- Custom JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
