@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <!-- Meta Tags Esensial -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>Yilzi Digital Portfolio | Portfolio Profesional Futuristik</title>
+    <meta name="description" content="Portfolio profesional dan futuristik dari Yilzi. Menampilkan keahlian dalam pengembangan web, desain UI/UX, dan inovasi digital. Hubungi untuk kolaborasi proyek.">
+    <meta name="keywords" content="yilzi digital portfolio, portfolio profesional, web developer, desainer grafis, ui/ux, frontend, futuristik, tailwind css, gsap, portfolio interaktif, developer indonesia">
+    <meta name="author" content="Yilzi Digital Store">
+    
+    <!-- Favicon (opsional, ganti dengan link favicon Anda) -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✨</text></svg>">
+    
+    <!-- Google Fonts: Inter & Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Poppins:wght@600;800&display=swap" rel="stylesheet">
+    
+    <!-- CDN Libraries -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com" defer></script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Aksesibilitas ARIA & Atribut Dasar -->
+    <meta name="theme-color" content="#1a1a2e">
+</head>
+
+<body class="bg-gradient-dark text-slate-200 font-inter transition-colors duration-500">
+    <!-- Preloader/Loading Screen -->
+    <div id="preloader" class="fixed inset-0 bg-[#0f0c29] z-[100] flex justify-center items-center">
+        <div class="loader"></div>
+    </div>
+    
+    <!-- Header & Navigasi -->
+    <header id="header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#home" class="text-2xl font-poppins font-extrabold text-white animate-fade-in-down" aria-label="Beranda Yilzi Portfolio">
+                Yilzi.
+            </a>
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="#about" class="nav-link">Tentang</a>
+                <a href="#skills" class="nav-link">Keahlian</a>
+                <a href="#projects" class="nav-link">Proyek</a>
+                <a href="#contact" class="nav-link">Kontak</a>
+            </div>
+            <div class="flex items-center space-x-4">
+                <button id="theme-toggle" class="w-10 h-10 rounded-full flex justify-center items-center glassmorphism-nav hover:bg-opacity-30" aria-label="Ganti Mode Gelap/Terang">
+                    <i id="theme-icon" class="fas fa-sun text-xl text-yellow-300"></i>
+                </button>
+                <button id="mobile-menu-btn" class="md:hidden w-10 h-10 flex justify-center items-center glassmorphism-nav" aria-label="Buka Menu">
+                    <i class="fas fa-bars text-xl text-white"></i>
+                </button>
+            </div>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-opacity-90 backdrop-blur-xl">
+            <a href="#about" class="block py-3 px-6 text-center nav-link">Tentang</a>
+            <a href="#skills" class="block py-3 px-6 text-center nav-link">Keahlian</a>
+            <a href="#projects" class="block py-3 px-6 text-center nav-link">Proyek</a>
+            <a href="#contact" class="block py-3 px-6 text-center nav-link">Kontak</a>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <!-- Hero Section -->
+        <section id="home" class="min-h-screen flex items-center justify-center text-center relative overflow-hidden">
+            <div class="absolute inset-0 bg-grid-pattern opacity-10"></div>
+            <div class="container mx-auto px-6 z-10">
+                <h1 class="text-5xl md:text-7xl lg:text-8xl font-poppins font-extrabold mb-4 uppercase" data-animate>
+                    <span class="text-gradient">Yilzi</span> Digital
+                </h1>
+                <p class="text-lg md:text-2xl text-slate-300 mb-8 max-w-3xl mx-auto" data-animate data-animate-delay="0.2">
+                    Portfolio Profesional | Menciptakan Pengalaman Digital Futuristik dan Elegan.
+                </p>
+                <a href="#projects" class="btn btn-primary" data-animate data-animate-delay="0.4">
+                    Lihat Proyek Saya <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="py-20 md:py-32 scroll-mt-20">
+            <div class="container mx-auto px-6">
+                <div class="grid md:grid-cols-5 gap-12 items-center">
+                    <div class="md:col-span-2" data-animate="fade-right">
+                        <div class="p-2 rounded-full profile-img-container">
+                            <img src="https://qu.ax/orgnm.jpg" alt="Foto profil Yilzi" class="rounded-full w-full h-auto shadow-2xl shadow-cyan-500/20">
+                        </div>
+                    </div>
+                    <div class="md:col-span-3" data-animate="fade-left">
+                        <h2 class="section-title">Tentang Saya</h2>
+                        <p class="text-slate-300 mb-6 leading-relaxed">
+                            Halo! Saya Yilzi, seorang developer dan desainer dengan hasrat untuk menciptakan solusi digital yang tidak hanya berfungsi dengan baik, tetapi juga memberikan pengalaman pengguna yang luar biasa. Saya menggabungkan keahlian teknis dengan mata yang tajam untuk estetika modern dan futuristik.
+                        </p>
+                        <p class="text-slate-300 mb-8 leading-relaxed">
+                            Dari aplikasi web yang kompleks hingga identitas merek yang menawan, saya berdedikasi untuk mendorong batas-batas kreativitas dan teknologi.
+                        </p>
+                        <div class="flex space-x-5">
+                            <a href="https://wa.me/6281359123789" target="_blank" class="social-icon" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                            <a href="https://instagram.com/yilzi_dominan" target="_blank" class="social-icon" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                            <a href="https://tiktok.com/@yilziii" target="_blank" class="social-icon" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                            <a href="https://github.com/yilziihct" target="_blank" class="social-icon" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="py-20 md:py-32 bg-slate-900/20 scroll-mt-20">
+            <div class="container mx-auto px-6">
+                <h2 class="section-title text-center">Keahlian & Teknologi</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+                    <!-- Skill Item -->
+                    <div class="skill-card" data-animate>
+                        <i class="fab fa-html5 text-5xl text-cyan-400 mb-4"></i>
+                        <h3 class="text-xl font-poppins font-semibold mb-3">Frontend Development</h3>
+                        <div class="skill-bar-container">
+                            <div class="skill-bar" data-progress="95" style="width: 0%;"></div>
+                            <span class="skill-percentage">95%</span>
+                        </div>
+                    </div>
+                    <!-- Skill Item -->
+                    <div class="skill-card" data-animate data-animate-delay="0.1">
+                         <i class="fab fa-js-square text-5xl text-yellow-400 mb-4"></i>
+                        <h3 class="text-xl font-poppins font-semibold mb-3">JavaScript (ES6+)</h3>
+                        <div class="skill-bar-container">
+                            <div class="skill-bar" data-progress="90" style="width: 0%;"></div>
+                            <span class="skill-percentage">90%</span>
+                        </div>
+                    </div>
+                     <!-- Skill Item -->
+                    <div class="skill-card" data-animate data-animate-delay="0.2">
+                        <i class="fab fa-react text-5xl text-blue-400 mb-4"></i>
+                        <h3 class="text-xl font-poppins font-semibold mb-3">React & Tailwind CSS</h3>
+                        <div class="skill-bar-container">
+                            <div class="skill-bar" data-progress="85" style="width: 0%;"></div>
+                             <span class="skill-percentage">85%</span>
+                        </div>
+                    </div>
+                    <!-- Skill Item -->
+                    <div class="skill-card" data-animate>
+                        <i class="fas fa-palette text-5xl text-pink-400 mb-4"></i>
+                        <h3 class="text-xl font-poppins font-semibold mb-3">UI/UX Design</h3>
+                        <div class="skill-bar-container">
+                            <div class="skill-bar" data-progress="92" style="width: 0%;"></div>
+                             <span class="skill-percentage">92%</span>
+                        </div>
+                    </div>
+                    <!-- Skill Item -->
+                    <div class="skill-card" data-animate data-animate-delay="0.1">
+                        <i class="fab fa-node-js text-5xl text-green-400 mb-4"></i>
+                        <h3 class="text-xl font-poppins font-semibold mb-3">Backend (Node.js)</h3>
+                        <div class="skill-bar-container">
+                            <div class="skill-bar" data-progress="70" style="width: 0%;"></div>
+                            <span class="skill-percentage">70%</span>
+                        </div>
+                    </div>
+                    <!-- Skill Item -->
+                    <div class="skill-card" data-animate data-animate-delay="0.2">
+                        <i class="fas fa-rocket text-5xl text-purple-400 mb-4"></i>
+                        <h3 class="text-xl font-poppins font-semibold mb-3">SEO & Performance</h3>
+                        <div class="skill-bar-container">
+                            <div class="skill-bar" data-progress="88" style="width: 0%;"></div>
+                            <span class="skill-percentage">88%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Gallery Section -->
+        <section id="projects" class="py-20 md:py-32 scroll-mt-20">
+            <div class="container mx-auto px-6">
+                <h2 class="section-title text-center">Galeri Proyek</h2>
+                <!-- Filter Buttons -->
+                <div id="project-filters" class="flex justify-center flex-wrap gap-3 mt-8 mb-12">
+                    <button class="filter-btn active" data-filter="all">Semua</button>
+                    <button class="filter-btn" data-filter="web">Web Dev</button>
+                    <button class="filter-btn" data-filter="uiux">UI/UX</button>
+                    <button class="filter-btn" data-filter="branding">Branding</button>
+                </div>
+                <!-- Projects Grid -->
+                <div id="project-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Project Item -->
+                    <div class="project-card" data-category="web" data-animate="zoom-in">
+                        <img src="https://picsum.photos/seed/project1/600/400" alt="Project 1" class="w-full h-full object-cover">
+                        <div class="project-overlay">
+                            <h3 class="text-xl font-poppins font-semibold">Platform E-commerce</h3>
+                            <p class="text-sm">Situs e-commerce dengan arsitektur modern.</p>
+                        </div>
+                    </div>
+                    <!-- Project Item -->
+                    <div class="project-card" data-category="uiux" data-animate="zoom-in">
+                        <img src="https://picsum.photos/seed/project2/600/400" alt="Project 2" class="w-full h-full object-cover">
+                        <div class="project-overlay">
+                            <h3 class="text-xl font-poppins font-semibold">Aplikasi FinTech</h3>
+                            <p class="text-sm">Desain UI/UX untuk aplikasi keuangan mobile.</p>
+                        </div>
+                    </div>
+                    <!-- Project Item -->
+                    <div class="project-card" data-category="branding" data-animate="zoom-in">
+                        <img src="https://picsum.photos/seed/project3/600/400" alt="Project 3" class="w-full h-full object-cover">
+                        <div class="project-overlay">
+                            <h3 class="text-xl font-poppins font-semibold">Identitas Merek Startup</h3>
+                            <p class="text-sm">Logo, palet warna, dan panduan gaya.</p>
+                        </div>
+                    </div>
+                     <!-- Project Item -->
+                    <div class="project-card" data-category="web" data-animate="zoom-in">
+                        <img src="https://picsum.photos/seed/project4/600/400" alt="Project 4" class="w-full h-full object-cover">
+                        <div class="project-overlay">
+                            <h3 class="text-xl font-poppins font-semibold">SaaS Dashboard</h3>
+                            <p class="text-sm">Dashboard analitik interaktif berbasis React.</p>
+                        </div>
+                    </div>
+                     <!-- Project Item -->
+                    <div class="project-card" data-category="uiux" data-animate="zoom-in">
+                        <img src="https://picsum.photos/seed/project5/600/400" alt="Project 5" class="w-full h-full object-cover">
+                        <div class="project-overlay">
+                            <h3 class="text-xl font-poppins font-semibold">Redesign Website Agensi</h3>
+                            <p class="text-sm">Perancangan ulang UI/UX website agensi digital.</p>
+                        </div>
+                    </div>
+                     <!-- Project Item -->
+                    <div class="project-card" data-category="web" data-animate="zoom-in">
+                        <img src="https://picsum.photos/seed/project6/600/400" alt="Project 6" class="w-full h-full object-cover">
+                        <div class="project-overlay">
+                            <h3 class="text-xl font-poppins font-semibold">Portfolio Fotografer</h3>
+                            <p class="text-sm">Website portfolio dengan animasi GSAP.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-20 md:py-32 bg-slate-900/20 scroll-mt-20">
+            <div class="container mx-auto px-6 max-w-4xl">
+                <h2 class="section-title text-center">Hubungi Saya</h2>
+                <p class="text-center text-slate-300 mb-12">Punya ide proyek atau ingin berkolaborasi? Kirimkan saya pesan!</p>
+                <form id="contact-form" class="space-y-6" novalidate>
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" class="form-input" placeholder=" " required>
+                        <label for="name" class="form-label">Nama Lengkap</label>
+                        <p class="error-message"></p>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" class="form-input" placeholder=" " required>
+                        <label for="email" class="form-label">Alamat Email</label>
+                         <p class="error-message"></p>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" rows="5" class="form-input" placeholder=" " required></textarea>
+                        <label for="message" class="form-label">Pesan Anda</label>
+                         <p class="error-message"></p>
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-primary w-full md:w-auto">
+                            Kirim Pesan <i class="fas fa-paper-plane ml-2"></i>
+                        </button>
+                    </div>
+                </form>
+                <div id="form-status" class="mt-8 text-center"></div>
+            </div>
+        </section>
+
+    </main>
+    
+    <!-- Footer -->
+    <footer class="bg-slate-900/50 py-10">
+        <div class="container mx-auto px-6 text-center text-slate-400">
+            <div class="flex justify-center space-x-6 mb-6">
+                <a href="https://wa.me/6281359123789" target="_blank" class="social-icon-footer" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                <a href="https://instagram.com/yilzi_dominan" target="_blank" class="social-icon-footer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://tiktok.com/@yilziii" target="_blank" class="social-icon-footer" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                <a href="https://github.com/yilziihct" target="_blank" class="social-icon-footer" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            </div>
+            <p class="mb-2">&copy; <span id="current-year"></span> Yilzi Digital Portfolio. Semua Hak Cipta Dilindungi.</p>
+            <p>Powered by <span class="font-semibold text-cyan-400">Yilzi Digital Store</span></p>
+        </div>
+    </footer>
+
+    <!-- GSAP CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+    
+    <!-- Custom JavaScript -->
+    <script src="script.js" defer></script>
+</body>
+</html>
