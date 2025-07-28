@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="id" class="dark">
+<!-- 
+  =====================================================================
+  Website Ecommerce Ultra-Premium: toko online
+  Dibuat oleh: 🌟 YILZI DIGITAL STORE 🌟
+  Tema: Elegan & Futuristik
+  Fitur Utama: Latar Belakang WebGL, Animasi GSAP, Keranjang Belanja
+  =====================================================================
+-->
+<head>
+    <!-- Meta Utama & SEO -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>toko online | Koleksi Pakaian Futuristik & Modern</title>
+    <meta name="description" content="Jelajahi koleksi eksklusif dari toko online. Pakaian ultra-premium dengan desain modern dan futuristik yang mendefinisikan kembali gaya urban. Kualitas dan inovasi dalam setiap jahitan.">
+    <meta name="keywords" content="toko online, pakaian futuristik, fashion modern, baju premium, streetwear, e-commerce, desainer, urban fashion, yilzi, koleksi 2024, baju online">
+    <meta name="author" content="Yilzi Digital Store">
+    <link rel="canonical" href="https://example.com"> <!-- Ganti dengan URL domain Anda -->
+    <link rel="icon" href="https://i.ibb.co/mX7MvN8/favicon-neo.png" type="image/png">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://example.com"> <!-- Ganti dengan URL domain Anda -->
+    <meta property="og:title" content="toko online | Koleksi Pakaian Futuristik & Modern">
+    <meta property="og:description" content="Definisikan ulang gaya Anda dengan koleksi pakaian ultra-premium dari toko online.">
+    <meta property="og:image" content="https://i.ibb.co/yY1h9gP/og-image-toko-online.png"> <!-- Ganti dengan URL gambar OG Anda -->
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://example.com"> <!-- Ganti dengan URL domain Anda -->
+    <meta property="twitter:title" content="toko online | Koleksi Pakaian Futuristik & Modern">
+    <meta property="twitter:description" content="Definisikan ulang gaya Anda dengan koleksi pakaian ultra-premium dari toko online.">
+    <meta property="twitter:image" content="https://i.ibb.co/yY1h9gP/og-image-toko-online.png"> <!-- Ganti dengan URL gambar OG Anda -->
+
+    <!-- CDNs & Stylesheets -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;800&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-primary text-textMain font-body overflow-x-hidden">
+
+    <!-- WebGL Particle Background -->
+    <canvas id="webgl-canvas"></canvas>
+
+    <!-- Header & Navigasi -->
+    <header id="main-header" class="fixed top-0 left-0 w-full z-50 transition-all duration-300">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-heading font-extrabold text-white animate__animated animate__fadeInDown" aria-label="Beranda toko online">
+                toko online
+            </a>
+            <div class="hidden lg:flex items-center space-x-8">
+                <a href="#products" class="nav-link">Koleksi</a>
+                <a href="#about" class="nav-link">Tentang</a>
+                <a href="#contact" class="nav-link">Kontak</a>
+            </div>
+            <div class="flex items-center space-x-5">
+                <button id="cart-button" class="relative text-white hover:text-accent transition-colors duration-300" aria-label="Buka Keranjang Belanja">
+                    <i class="fa-solid fa-cart-shopping fa-lg"></i>
+                    <span id="cart-count" class="absolute -top-2 -right-2 bg-accent text-primary text-xs font-bold rounded-full h-5 w-5 flex items-center justify-center scale-0">0</span>
+                </button>
+                <button id="theme-toggle" class="text-white hover:text-accent transition-colors duration-300" aria-label="Ganti Mode Gelap/Terang">
+                    <i class="fa-solid fa-sun"></i>
+                </button>
+                <button id="mobile-menu-button" class="lg:hidden text-white text-2xl z-50" aria-label="Buka Menu">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="fixed top-0 right-0 h-full w-full bg-primary/80 backdrop-blur-lg z-40 translate-x-full transition-transform duration-500 ease-in-out lg:hidden">
+        <div class="flex flex-col items-center justify-center h-full space-y-8">
+            <a href="#products" class="mobile-nav-link text-3xl font-heading">Koleksi</a>
+            <a href="#about" class="mobile-nav-link text-3xl font-heading">Tentang</a>
+            <a href="#contact" class="mobile-nav-link text-3xl font-heading">Kontak</a>
+        </div>
+    </div>
+    
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="h-screen flex items-center justify-center text-center text-white relative overflow-hidden">
+            <div class="z-10 px-4">
+                <h1 id="hero-title" class="text-5xl md:text-7xl lg:text-8xl font-extrabold font-heading uppercase tracking-wider">
+                    <span class="word">Gaya</span> <span class="word">Bertemu</span> <span class="word">Masa Depan</span>
+                </h1>
+                <p id="hero-subtitle" class="mt-4 text-lg md:text-xl max-w-2xl mx-auto opacity-0">Selamat datang di toko online. Definisikan kembali gaya Anda dengan pakaian yang melampaui tren.</p>
+                <a href="#products" id="hero-cta" class="btn btn-primary mt-10 inline-block opacity-0">
+                    Jelajahi Koleksi <i class="fa-solid fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+        </section>
+
+        <!-- Product Section -->
+        <section id="products" class="py-24 relative z-10">
+            <div class="container mx-auto px-6">
+                <h2 class="section-title">Koleksi Terbaru</h2>
+                <div id="product-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 mt-12">
+                    <!-- Product cards will be injected by JavaScript -->
+                    <!-- Contoh Kartu Produk -->
+                    <article class="product-card" data-product-id="1" data-name="CYBER-NEXUS HOODIE" data-price="1250000" data-image-url="https://i.ibb.co/3zd2yRk/product1.png">
+                        <figure class="relative aspect-square overflow-hidden rounded-lg">
+                            <img data-src="https://i.ibb.co/3zd2yRk/product1.png" alt="Cyber-Nexus Hoodie" class="lazyload product-image w-full h-full object-cover transition-transform duration-500">
+                            <div class="product-overlay"></div>
+                        </figure>
+                        <div class="mt-4 text-center">
+                            <h3 class="font-heading text-xl text-white">CYBER-NEXUS HOODIE</h3>
+                            <p class="text-accent font-bold mt-1">Rp 1.250.000</p>
+                            <button class="btn btn-secondary mt-4 add-to-cart-btn">Tambah ke Keranjang</button>
+                        </div>
+                    </article>
+                     <!-- Tambah produk lainnya di sini dengan struktur yang sama -->
+                    <article class="product-card" data-product-id="2" data-name="VOID-DRIFT JACKET" data-price="2100000" data-image-url="https://i.ibb.co/MGDxSyB/product2.png">
+                        <figure class="relative aspect-square overflow-hidden rounded-lg">
+                            <img data-src="https://i.ibb.co/MGDxSyB/product2.png" alt="Void-Drift Jacket" class="lazyload product-image w-full h-full object-cover transition-transform duration-500">
+                             <div class="product-overlay"></div>
+                        </figure>
+                        <div class="mt-4 text-center">
+                            <h3 class="font-heading text-xl text-white">VOID-DRIFT JACKET</h3>
+                            <p class="text-accent font-bold mt-1">Rp 2.100.000</p>
+                            <button class="btn btn-secondary mt-4 add-to-cart-btn">Tambah ke Keranjang</button>
+                        </div>
+                    </article>
+                    <article class="product-card" data-product-id="3" data-name="ORION-TECH PANTS" data-price="950000" data-image-url="https://i.ibb.co/8sV7dJb/product3.png">
+                        <figure class="relative aspect-square overflow-hidden rounded-lg">
+                            <img data-src="https://i.ibb.co/8sV7dJb/product3.png" alt="Orion-Tech Pants" class="lazyload product-image w-full h-full object-cover transition-transform duration-500">
+                             <div class="product-overlay"></div>
+                        </figure>
+                        <div class="mt-4 text-center">
+                            <h3 class="font-heading text-xl text-white">ORION-TECH PANTS</h3>
+                            <p class="text-accent font-bold mt-1">Rp 950.000</p>
+                            <button class="btn btn-secondary mt-4 add-to-cart-btn">Tambah ke Keranjang</button>
+                        </div>
+                    </article>
+                    <article class="product-card" data-product-id="4" data-name="NOVA-KNIT T-SHIRT" data-price="750000" data-image-url="https://i.ibb.co/tLWg0J7/product4.png">
+                        <figure class="relative aspect-square overflow-hidden rounded-lg">
+                            <img data-src="https://i.ibb.co/tLWg0J7/product4.png" alt="Nova-Knit T-shirt" class="lazyload product-image w-full h-full object-cover transition-transform duration-500">
+                             <div class="product-overlay"></div>
+                        </figure>
+                        <div class="mt-4 text-center">
+                            <h3 class="font-heading text-xl text-white">NOVA-KNIT T-SHIRT</h3>
+                            <p class="text-accent font-bold mt-1">Rp 750.000</p>
+                            <button class="btn btn-secondary mt-4 add-to-cart-btn">Tambah ke Keranjang</button>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-24 relative z-10">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="section-title">Hubungi Kami</h2>
+                <p class="max-w-xl mx-auto mt-4">Punya pertanyaan atau ingin berkolaborasi? Kami siap mendengarkan.</p>
+                <form id="contact-form" class="max-w-2xl mx-auto mt-12 text-left" novalidate>
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" class="form-input" placeholder=" " required>
+                        <label for="name" class="form-label">Nama</label>
+                        <p class="error-message">Nama tidak boleh kosong.</p>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" class="form-input" placeholder=" " required>
+                        <label for="email" class="form-label">Email</label>
+                        <p class="error-message">Format email tidak valid.</p>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" rows="4" class="form-input" placeholder=" " required></textarea>
+                        <label for="message" class="form-label">Pesan Anda</label>
+                        <p class="error-message">Pesan tidak boleh kosong.</p>
+                    </div>
+                    <button type="submit" class="btn btn-primary w-full mt-6">Kirim Pesan</button>
+                </form>
+                <div id="form-success" class="hidden mt-6 text-accent">Pesan Anda telah berhasil dikirim!</div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-12 relative z-10 bg-primary/50 border-t border-gray-800">
+        <div class="container mx-auto px-6 text-center text-textSecondary">
+            <h3 class="text-2xl font-heading text-white">toko online</h3>
+            <p class="mt-4">Inovasi, gaya, dan kualitas tanpa kompromi.</p>
+            <div class="flex justify-center space-x-6 mt-6">
+                <a href="#" class="social-link" aria-label="Yilzi Dominan"><i class="fa-brands fa-twitter"></i> @yilzi_dominan</a>
+                <a href="#" class="social-link" aria-label="Yilzi Instagram"><i class="fa-brands fa-instagram"></i> @yilziii</a>
+                <a href="#" class="social-link" aria-label="Yilzi Digital Store LinkedIn"><i class="fa-brands fa-linkedin"></i> Yilzi Digital Store</a>
+            </div>
+            <div class="mt-8 border-t border-gray-700 pt-8">
+                <p>&copy; <span id="year"></span> toko online. All Rights Reserved.</p>
+                <p class="text-sm mt-2">Powered by <span class="font-bold text-accent">🌟 YILZI DIGITAL STORE 🌟</span></p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Cart Modal/Sidebar -->
+    <div id="cart-sidebar" class="fixed top-0 right-0 h-full w-full max-w-md bg-secondary text-white shadow-lg z-[60] translate-x-full transition-transform duration-500 ease-in-out flex flex-col">
+        <div class="flex justify-between items-center p-6 border-b border-gray-700">
+            <h3 class="font-heading text-2xl">Keranjang Anda</h3>
+            <button id="close-cart-btn" class="text-2xl hover:text-accent">&times;</button>
+        </div>
+        <div id="cart-items" class="flex-grow p-6 overflow-y-auto">
+            <!-- Cart items will be here -->
+            <p id="empty-cart-message" class="text-center text-textSecondary">Keranjang Anda masih kosong.</p>
+        </div>
+        <div class="p-6 border-t border-gray-700">
+            <div class="flex justify-between items-center font-bold text-lg">
+                <span>Subtotal</span>
+                <span id="cart-subtotal">Rp 0</span>
+            </div>
+            <button class="btn btn-primary w-full mt-4">Checkout</button>
+        </div>
+    </div>
+    <div id="cart-overlay" class="fixed inset-0 bg-black/50 z-50 hidden"></div>
+
+    <!-- JavaScript CDNs -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/lazysizes.min.js" async=""></script>
+    <!-- Custom Script -->
+    <script src="script.js" defer></script>
+</body>
+</html>
