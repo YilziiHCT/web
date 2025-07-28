@@ -1,0 +1,253 @@
+/* CSS dengan animasi kompleks, responsif, dan efek visual modern */
+
+/* =====================================================================
+   IMPORTS & ROOT VARIABLES
+   ===================================================================== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600;800&family=Inter:wght@400;700&display=swap');
+
+:root {
+  --font-heading: 'Poppins', sans-serif;
+  --font-body: 'Inter', sans-serif;
+}
+
+/* Light Theme Variables */
+:root.light {
+  --color-primary: #F0F2F5; /* Soft light grey */
+  --color-secondary: #FFFFFF;
+  --color-text-main: #1a1a2e; /* Dark navy */
+  --color-text-secondary: #5c5c7a;
+  --color-accent: #ff007a; /* Magenta for contrast */
+  --color-accent-secondary: #0077ff;
+}
+
+/* Dark Theme Variables (Default) */
+:root, :root.dark {
+  --color-primary: #0a0a14; /* Deep, near-black blue */
+  --color-secondary: #10101E; /* Slightly lighter navy */
+  --color-text-main: #e0e0ff; /* Soft white/lavender */
+  --color-text-secondary: #a0a0c0; /* Greyish lavender */
+  --color-accent: #00f2fe; /* Bright neon cyan */
+  --color-accent-secondary: #ff007a; /* Neon magenta */
+}
+
+/* =====================================================================
+   TAILWIND CONFIG & BASE STYLES
+   ===================================================================== */
+/* 
+  We extend Tailwind's config directly in the script for simplicity with a CDN.
+  This CSS file will handle custom components and complex animations
+  that are easier to write in pure CSS.
+*/
+.tailwind-config {
+  @apply hidden; /* Dummy class for config comments */
+}
+/* In tailwind.config.js, you would add:
+  theme: {
+    extend: {
+      colors: {
+        primary: 'var(--color-primary)',
+        secondary: 'var(--color-secondary)',
+        accent: 'var(--color-accent)',
+        'accent-secondary': 'var(--color-accent-secondary)',
+        textMain: 'var(--color-text-main)',
+        textSecondary: 'var(--color-text-secondary)',
+      },
+      fontFamily: {
+        heading: ['Poppins', 'sans-serif'],
+        body: ['Inter', 'sans-serif'],
+      }
+    }
+  }
+*/
+body {
+    background-color: var(--color-primary);
+    color: var(--color-text-main);
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+/* Custom scrollbar for a futuristic feel */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-secondary);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-accent);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: color-mix(in srgb, var(--color-accent), #fff 20%);
+}
+
+/* =====================================================================
+   REUSABLE COMPONENTS & UTILITIES
+   ===================================================================== */
+#webgl-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  outline: none;
+  z-index: 0;
+}
+
+.section-title {
+  @apply text-4xl md:text-5xl font-extrabold font-heading text-center;
+  color: var(--color-text-main);
+}
+
+/* Buttons with futuristic effects */
+.btn {
+  @apply inline-block px-8 py-3 rounded-md font-bold text-lg uppercase tracking-wider transition-all duration-300 transform;
+}
+
+.btn-primary {
+  @apply bg-accent text-primary;
+  box-shadow: 0 0 10px var(--color-accent), 0 0 20px var(--color-accent);
+}
+.btn-primary:hover {
+  @apply scale-105;
+  box-shadow: 0 0 15px var(--color-accent), 0 0 30px var(--color-accent);
+}
+
+.btn-secondary {
+  @apply bg-transparent border-2 border-accent text-accent;
+}
+.btn-secondary:hover {
+  @apply bg-accent text-primary;
+  box-shadow: 0 0 10px var(--color-accent);
+}
+
+
+/* =====================================================================
+   HEADER & NAVIGATION
+   ===================================================================== */
+#main-header {
+  transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+#main-header.scrolled {
+  background-color: rgba(10, 10, 20, 0.7); /* Use rgba for transparency */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+}
+
+.nav-link {
+    @apply text-white font-semibold relative;
+    transition: color 0.3s ease;
+}
+.nav-link:hover {
+    color: var(--color-accent);
+}
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: var(--color-accent);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease-out;
+}
+.nav-link:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+/* =====================================================================
+   PRODUCT CARDS
+   ===================================================================== */
+.product-card {
+  background: rgba(16, 16, 30, 0.6); /* Glassmorphism background */
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 1rem;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  will-change: transform;
+  transform-style: preserve-3d;
+  position: relative;
+  overflow: hidden;
+}
+
+.product-card:hover {
+  transform: translateY(-10px) perspective(1000px) rotateX(2deg) rotateY(-2deg);
+  box-shadow: 0 0 20px rgba(0, 242, 254, 0.3), 0 0 40px rgba(0, 242, 254, 0.1);
+}
+
+.product-card::before {
+  content: '';
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
+  border-radius: 12px;
+  border: 2px solid transparent;
+  transition: border-color 0.4s ease;
+  pointer-events: none; /* Allows clicks to pass through */
+}
+.product-card:hover::before {
+  border-color: var(--color-accent);
+}
+
+.product-image:hover, .product-card:hover .product-image {
+  transform: scale(1.05);
+}
+
+/* =====================================================================
+   FORM STYLES
+   ===================================================================== */
+.form-group {
+    @apply relative mb-6;
+}
+.form-input {
+    @apply w-full bg-transparent border-b-2 border-textSecondary py-2 text-lg text-textMain outline-none transition-colors duration-300;
+}
+.form-input:focus {
+    @apply border-accent;
+}
+.form-label {
+    @apply absolute left-0 top-2 text-textSecondary text-lg transition-all duration-300 pointer-events-none;
+}
+.form-input:focus + .form-label,
+.form-input:not(:placeholder-shown) + .form-label {
+    @apply -top-5 text-sm text-accent;
+}
+.error-message {
+    @apply text-red-500 text-sm mt-1 hidden;
+}
+.form-group.has-error .error-message {
+    @apply block;
+}
+.form-group.has-error .form-input {
+    @apply border-red-500;
+}
+.form-group.has-error .form-label {
+    @apply text-red-500;
+}
+
+/* =====================================================================
+   FOOTER
+   ===================================================================== */
+.social-link {
+    @apply text-textSecondary hover:text-accent transition-colors duration-300 flex items-center gap-2;
+}
+
+
+/* =====================================================================
+   RESPONSIVE DESIGN
+   ===================================================================== */
+@media (max-width: 1023px) {
+  .mobile-menu-button {
+    @apply block;
+  }
+}
+
+@media (max-width: 768px) {
+  .section-title {
+    @apply text-3xl;
+  }
+
+  #hero h1 {
+    @apply text-4xl;
+  }
+}
