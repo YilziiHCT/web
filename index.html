@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<!-- 
+================================================================
+|   Ultra-Premium E-commerce Website                           |
+|   Created by: Yilzi Digital Store 🌟                          |
+|   Website: toko online - Futuristic Apparel                  |
+|   Description: A cutting-edge e-commerce experience.          |
+================================================================
+-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>toko online | Pakaian Futuristik & Koleksi Premium</title>
+    <meta name="description" content="Jelajahi koleksi eksklusif dari toko online. Pakaian ultra-premium dengan desain futuristik, modern, dan elegan untuk gaya yang tak tertandingi. Belanja sekarang.">
+    <meta name="keywords" content="toko online, fashion futuristik, pakaian premium, baju modern, streetwear, desainer, belanja online, koleksi eksklusif, cyberpunk fashion, techwear, Yilzi">
+    <meta name="author" content="Yilzi Digital Store">
+    <link rel="icon" href="https://i.ibb.co/9vP5c0s/favicon-32x32.png" type="image/png">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://example.com/">
+    <meta property="og:title" content="toko online | Pakaian Futuristik & Koleksi Premium">
+    <meta property="og:description" content="Jelajahi koleksi eksklusif dari toko online. Pakaian ultra-premium dengan desain futuristik.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1579546929518-9e396f3cc809?q=80&w=2070&auto=format&fit=crop">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://example.com/">
+    <meta property="twitter:title" content="toko online | Pakaian Futuristik & Koleksi Premium">
+    <meta property="twitter:description" content="Jelajahi koleksi eksklusif dari toko online. Pakaian ultra-premium dengan desain futuristik.">
+    <meta property="twitter:image" content="https://images.unsplash.com/photo-1579546929518-9e396f3cc809?q=80&w=2070&auto=format&fit=crop">
+    
+    <!-- Frameworks & Libraries CDN -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Poppins:wght@600;800&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-primary text-gray-200 font-sans">
+
+    <!-- Header & Navigation -->
+    <header id="header" class="fixed top-0 left-0 w-full z-50 transition-all duration-300">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-poppins font-extrabold uppercase brand-logo">toko online</a>
+            
+            <div id="nav-menu" class="hidden lg:flex items-center space-x-8">
+                <a href="#hero" class="nav-link">Home</a>
+                <a href="#koleksi" class="nav-link">Koleksi</a>
+                <a href="#tentang" class="nav-link">Tentang</a>
+                <a href="#kontak" class="nav-link">Kontak</a>
+            </div>
+
+            <div class="flex items-center space-x-5">
+                <button id="theme-toggle" class="text-2xl hover:text-accent-cyan transition-colors">
+                    <i class="fas fa-sun"></i>
+                </button>
+                <button id="cart-toggle" class="relative text-2xl hover:text-accent-cyan transition-colors">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span id="cart-count" class="absolute -top-2 -right-3 bg-accent-pink text-white text-xs rounded-full h-5 w-5 flex items-center justify-center font-bold">0</span>
+                </button>
+                <button id="hamburger-menu" class="lg:hidden text-2xl z-50">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Mobile Navigation Menu -->
+    <div id="mobile-menu" class="hidden fixed inset-0 bg-primary/90 backdrop-blur-lg z-40 lg:hidden">
+        <div class="flex flex-col items-center justify-center h-full space-y-8">
+            <a href="#hero" class="mobile-nav-link text-3xl font-poppins">Home</a>
+            <a href="#koleksi" class="mobile-nav-link text-3xl font-poppins">Koleksi</a>
+            <a href="#tentang" class="mobile-nav-link text-3xl font-poppins">Tentang</a>
+            <a href="#kontak" class="mobile-nav-link text-3xl font-poppins">Kontak</a>
+        </div>
+    </div>
+
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="min-h-screen flex items-center justify-center text-center relative overflow-hidden">
+            <div class="absolute inset-0 bg-gradient-to-br from-primary via-secondary to-primary opacity-80 z-10"></div>
+            <div class="video-background">
+                <video playsinline autoplay muted loop poster="https://i.ibb.co/Y3R3Mh6/poster.jpg">
+                    <source src="https://assets.mixkit.co/videos/preview/mixkit-black-and-white-shot-of-a-person-modeling-a-hoodie-34448-large.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="container mx-auto px-6 relative z-20">
+                <h1 class="text-5xl md:text-7xl lg:text-8xl font-poppins font-extrabold uppercase hero-title">
+                    <span class="animate-reveal">Mendefinisikan</span><br>
+                    <span class="animate-reveal" style="--delay: 0.2s;">Ulang Gaya</span>
+                </h1>
+                <p class="mt-4 max-w-2xl mx-auto text-lg md:text-xl text-gray-300 hero-subtitle">
+                    Koleksi premium yang memadukan teknologi dan seni. Selamat datang di masa depan fashion.
+                </p>
+                <a href="#koleksi" class="btn btn-primary mt-8">Jelajahi Koleksi</a>
+            </div>
+        </section>
+
+        <!-- Product Collection Section -->
+        <section id="koleksi" class="py-20 md:py-32">
+            <div class="container mx-auto px-6">
+                <h2 class="section-title text-center">Koleksi Eksklusif</h2>
+                <div id="product-grid" class="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+                    <!-- Product cards will be dynamically inserted here by script.js -->
+                    <!-- Example Card Structure -->
+                    <div class="product-card" data-id="1" data-name="CYBER-NEXUS Hoodie" data-price="1250000" data-image="https://i.ibb.co/hRr6q1F/product1.jpg">
+                        <div class="product-card-inner">
+                            <img data-src="https://i.ibb.co/hRr6q1F/product1.jpg" class="lazyload product-image" alt="CYBER-NEXUS Hoodie">
+                            <div class="product-overlay">
+                                <h3 class="product-name">CYBER-NEXUS Hoodie</h3>
+                                <p class="product-price">Rp 1.250.000</p>
+                                <button class="btn btn-secondary add-to-cart-btn">Tambah ke Keranjang</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- About Section -->
+        <section id="tentang" class="py-20 md:py-32 bg-secondary">
+            <div class="container mx-auto px-6 flex flex-col md:flex-row items-center gap-12">
+                <div class="md:w-1/2 about-content">
+                    <h2 class="section-title">Inovasi Bertemu Gaya</h2>
+                    <p class="mt-4 text-gray-300">
+                        toko online lahir dari visi untuk menggabungkan estetika futuristik dengan material berkualitas tertinggi. Setiap bagian adalah pernyataan, dirancang untuk individu yang berani yang tidak takut untuk menonjol. Kami bukan hanya merek; kami adalah gerakan menuju cakrawala baru dalam fashion.
+                    </p>
+                    <a href="#kontak" class="btn btn-primary mt-8">Hubungi Kami</a>
+                </div>
+                <div class="md:w-1/2 about-image-container">
+                    <img data-src="https://i.ibb.co/1KkZ3yQ/about.jpg" class="lazyload rounded-lg shadow-2xl w-full h-auto" alt="Tentang Toko Online">
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Contact Section -->
+        <section id="kontak" class="py-20 md:py-32">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="section-title">Hubungi Kami</h2>
+                <p class="mt-4 max-w-xl mx-auto text-gray-400">Punya pertanyaan atau ingin berkolaborasi? Kami ingin mendengar dari Anda.</p>
+                
+                <form id="contact-form" class="mt-12 max-w-2xl mx-auto" novalidate>
+                    <div id="form-feedback" class="mb-4 text-lg"></div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <input type="text" id="name" name="name" placeholder="Nama Anda" class="form-input" required>
+                        <input type="email" id="email" name="email" placeholder="Email Anda" class="form-input" required>
+                    </div>
+                    <textarea id="message" name="message" rows="5" placeholder="Pesan Anda" class="form-input mt-6" required></textarea>
+                    <button type="submit" class="btn btn-primary mt-8">Kirim Pesan</button>
+                </form>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Footer -->
+    <footer class="bg-secondary py-12">
+        <div class="container mx-auto px-6 text-center">
+            <h3 class="text-3xl font-poppins font-extrabold uppercase brand-logo">toko online</h3>
+            <p class="mt-4 text-gray-400">Masa depan fashion ada di sini.</p>
+            <div class="flex justify-center space-x-6 mt-8">
+                <a href="https://instagram.com/yilzi_dominan" target="_blank" class="social-link"><i class="fab fa-instagram"></i></a>
+                <a href="https://twitter.com/yilziii" target="_blank" class="social-link"><i class="fab fa-twitter"></i></a>
+                <a href="https://youtube.com/@YilziDigitalStore" target="_blank" class="social-link"><i class="fab fa-youtube"></i></a>
+            </div>
+            <div class="mt-8 border-t border-gray-700 pt-6 text-sm text-gray-500">
+                <p>&copy; <span id="current-year"></span> toko online. All Rights Reserved.</p>
+                <p class="mt-2">Powered by <a href="#" class="font-bold hover:text-accent-cyan">🌟 Yilzi Digital Store 🌟</a></p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Shopping Cart Modal -->
+    <div id="cart-modal" class="hidden fixed inset-0 z-50 flex items-center justify-center">
+        <div id="cart-overlay" class="absolute inset-0 bg-black/70"></div>
+        <div id="cart-container" class="relative z-10 w-full max-w-lg mx-4 md:mx-0 p-8 rounded-lg cart-glassmorphism transform translate-y-10 opacity-0">
+            <div class="flex justify-between items-center mb-6">
+                <h2 class="text-2xl font-poppins font-bold">Keranjang Belanja</h2>
+                <button id="close-cart-btn" class="text-2xl hover:text-accent-pink">&times;</button>
+            </div>
+            <div id="cart-items-container" class="max-h-64 overflow-y-auto pr-2 space-y-4">
+                <!-- Cart items will be here -->
+                <p id="empty-cart-msg">Keranjang Anda kosong.</p>
+            </div>
+            <div class="border-t border-gray-600 mt-6 pt-4">
+                <div class="flex justify-between items-center font-bold text-lg">
+                    <span>Total</span>
+                    <span id="cart-total">Rp 0</span>
+                </div>
+                <button class="btn btn-primary w-full mt-6">Lanjut ke Checkout</button>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- JavaScript Libraries CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/lazysizes.min.js" async=""></script>
+
+    <!-- Custom JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
